@@ -1063,7 +1063,7 @@ ModuleSettings.CreateToggle({
 	["HoverText"] = "Temporarily disables certain features in server lobbies."
 })
 local blatantmode = GUI.CreateToggle({
-	["Name"] = "Blatant mode",
+	["Name"] = "Blatant mode sus",
 	["Function"] = function() end,
 	["HoverText"] = "Required for certain features."
 })
@@ -1348,7 +1348,7 @@ GuiLibrary["UpdateUI"]()
 if not shared.VapeSwitchServers then
 	if blatantmode["Enabled"] then
 		pcall(function()
-			local frame = GuiLibrary["CreateNotification"]("Blatant Enabled", "Vape is now in Blatant Mode.", 4, "vape/assets/WarningNotification.png")
+			local frame = GuiLibrary["CreateNotification"]("Blatant Enabled sus amogus", "Vape is now in Blatant Mode.", 4, "vape/assets/WarningNotification.png")
 			frame.Frame.BackgroundColor3 = Color3.fromRGB(236, 129, 44)
 			frame.Frame.Frame.BackgroundColor3 = Color3.fromRGB(236, 129, 44)
 		end)
