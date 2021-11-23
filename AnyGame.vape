@@ -1523,6 +1523,7 @@ runcode(function()
 		end
 	end
 
+
 	NickHider = GuiLibrary["ObjectsThatCanBeSaved"]["RenderWindow"]["Api"].CreateOptionsButton({
 		["Name"] = "NickHider",
 		["Function"] = function(callback)
