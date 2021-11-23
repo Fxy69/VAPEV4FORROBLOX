@@ -704,7 +704,7 @@ local longjump = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].Cre
 			BindToRenderStep("LongJump", 1, function() 
 				if isAlive() then
 					if (lplr.Character.Humanoid:GetState() == Enum.HumanoidStateType.Freefall or lplr.Character.Humanoid:GetState() == Enum.HumanoidStateType.Jumping) and lplr.Character.Humanoid.MoveDirection ~= Vector3.new(0, 0, 0) then
-						lplr.Character.HumanoidRootPart.Velocity = lplr.Character.HumanoidRootPart.Velocity + lplr.Character.Humanoid.MoveDirection * (longjumpboost["Value"] / 5000)
+						lplr.Character.HumanoidRootPart.Velocity = lplr.Character.HumanoidRootPart.Velocity + lplr.Character.Humanoid.MoveDirection * (longjumpboost["Value"] / 50)
 					end
 				end
 			end)
@@ -716,9 +716,29 @@ local longjump = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].Cre
 longjumpboost = longjump.CreateSlider({
 	["Name"] = "Boost",
 	["Min"] = 1,
-	["Max"] = 5000, 
+	["Max"] = 150, 
 	["Function"] = function(val) end
 })
+
+local testboost = {["Value"] = 5}
+local test = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+	["Name"] = "Test", 
+	["Function"] = function(callback)
+		if callback then
+			BindToRenderStep("Test", 1, function() 
+				if isAlive() then
+					if (lplr.Character.Humanoid:GetState() == Enum.HumanoidStateType.Freefall or lplr.Character.Humanoid:GetState() == Enum.HumanoidStateType.Jumping) and lplr.Character.Humanoid.MoveDirection ~= Vector3.new(0, 0, 0) then
+						lplr.Character.HumanoidRootPart.Velocity = lplr.Character.HumanoidRootPart.Velocity + lplr.Character.Humanoid.MoveDirection * (200 / 50)
+					end
+				end
+			end)
+		else
+			UnbindFromRenderStep("LongJump")
+		end
+	end
+})
+
+
 
 local HighJumpMethod = {["Value"] = "Toggle"}
 local HighJumpBoost = {["Value"] = 1}
