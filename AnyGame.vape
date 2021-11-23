@@ -720,9 +720,6 @@ longjumpboost = longjump.CreateSlider({
 	["Function"] = function(val) end
 })
 
-
-
-
 local HighJumpMethod = {["Value"] = "Toggle"}
 local HighJumpBoost = {["Value"] = 1}
 local HighJumpDelay = {["Value"] = 20}
