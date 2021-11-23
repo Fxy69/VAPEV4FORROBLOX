@@ -583,6 +583,10 @@ flyupanddown = fly.CreateToggle({
 	["Name"] = "Y Level", 
 	["Function"] = function() end
 })
+flytest = fly.CreateToggle({
+	["Name"] = "test", 
+	["Function"] = function() end
+})
 
 local hitboxexpand = {["Value"] = 1}
 local Hitbox =  GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
