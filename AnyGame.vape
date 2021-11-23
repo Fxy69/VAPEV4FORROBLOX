@@ -720,7 +720,7 @@ longjumpboost = longjump.CreateSlider({
 	["Function"] = function(val) end
 })
 
-local testboost = {["Value"] = 5}
+local testboost = {["Value"] = 1}
 local test = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
 	["Name"] = "Test", 
 	["Function"] = function(callback)
