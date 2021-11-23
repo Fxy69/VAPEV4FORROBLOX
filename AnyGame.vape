@@ -720,8 +720,6 @@ longjumpboost = longjump.CreateSlider({
 	["Function"] = function(val) end
 })
 
-
-
 local HighJumpMethod = {["Value"] = "Toggle"}
 local HighJumpBoost = {["Value"] = 1}
 local HighJumpDelay = {["Value"] = 20}
@@ -1524,7 +1522,6 @@ runcode(function()
 			end
 		end
 	end
-
 
 	NickHider = GuiLibrary["ObjectsThatCanBeSaved"]["RenderWindow"]["Api"].CreateOptionsButton({
 		["Name"] = "NickHider",
