@@ -494,6 +494,7 @@ local flydown = false
 local flypress
 local flyendpress
 local bodyvelofly
+local flytest
 local fly = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
 	["Name"] = "Fly", 
 	["Function"] = function(callback)
@@ -805,6 +806,7 @@ local speedval = {["Value"] = 1}
 local speedmethod = {["Value"] = "AntiCheat A"}
 local speedjump = {["Enabled"] = false}
 local bodyvelo
+local sigmaclient
 
 local speed = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
 	["Name"] = "Speed", 
@@ -854,11 +856,15 @@ speedmethod = speed.CreateDropdown({
 speedval = speed.CreateSlider({
 	["Name"] = "Speed", 
 	["Min"] = 1,
-	["Max"] = 150, 
+	["Max"] = 300, 
 	["Function"] = function(val) end
 })
 speedjump = speed.CreateToggle({
 	["Name"] = "AutoJump", 
+	["Function"] = function() end
+})
+sigmaclient = speed.CreateToggle({
+	["Name"] = "Sigma", 
 	["Function"] = function() end
 })
 
