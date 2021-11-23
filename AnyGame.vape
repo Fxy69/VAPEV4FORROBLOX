@@ -716,7 +716,7 @@ local longjump = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].Cre
 longjumpboost = longjump.CreateSlider({
 	["Name"] = "Boost",
 	["Min"] = 1,
-	["Max"] = 150, 
+	["Max"] = 200, 
 	["Function"] = function(val) end
 })
 
