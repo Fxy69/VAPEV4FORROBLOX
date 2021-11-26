@@ -487,7 +487,7 @@ ClickTP = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOpti
 local flyspeed = {["Value"] = 1}
 local flyverticalspeed = {["Value"] = 1}
 local flyupanddown = {["Enabled"] = false}
-local flymethod = {["Value"] = "Normal"}
+local flymethod = {["Value"] = "AntiCheat"}
 local flyposy = 0
 local flyup = false
 local flydown = false
@@ -501,6 +501,7 @@ local fly = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOp
 		if callback then
 			if isAlive() then
 				flyposy = lplr.Character.HumanoidRootPart.CFrame.p.Y
+				flyposx = lplr.Character.HumanoidRootPart.CFrame.p.Y
 			end
 			flypress = game:GetService("UserInputService").InputBegan:connect(function(input1)
 				if flyupanddown["Enabled"] and game:GetService("UserInputService"):GetFocusedTextBox() == nil then
